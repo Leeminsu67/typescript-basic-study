@@ -1,0 +1,37 @@
+# TypeScript 설치 및 버전 확인 ✅
+
+간단한 설치 및 버전 확인 기록입니다.
+
+## 1) Node / npm 버전 확인
+```
+$ node --version
+v24.11.1
+
+$ npm --version
+11.6.2
+```
+
+## 2) TypeScript 전역 설치
+```
+$ npm install typescript --global
+added 1 package in 839ms
+```
+
+## 3) tsc (TypeScript Compiler) 버전 확인
+```
+$ tsc --version
+Version 5.9.3
+```
+
+## 4) typescript 프로젝트내 초기화(설치)
+```
+$ tsc --init
+```
+
+## 학습 자료: `1_basic` 폴더 요약 🔎
+- `1_problem_with_js.js`  
+  - JavaScript의 동적 타입으로 발생할 수 있는 문제를 보여줍니다. `add()`에 숫자가 아닌 문자열을 넘기면 의도치 않은 연결(concatenation) 동작이 발생합니다. `addTypeSafe()` 예시는 런타임에서 typeof로 검사해 오류를 던지는 방법을 설명합니다.
+- `1_problem_with_js.ts`  
+  - 같은 `add()` 함수를 TypeScript로 작성한 파일입니다. 함수 매개변수에 `number` 타입을 명시해 컴파일 단계에서 잘못된 타입 사용을 방지합니다(예: `add(1, "2")` 호출은 주석 처리되어 있습니다).
+
+실습 팁: `.ts` 파일을 빠르게 실행하려면 `tsc`로 컴파일 후 실행하거나, `ts-node`를 설치해 바로 실행할 수 있습니다: `npm i -g ts-node` 또는 프로젝트 레벨에 `npm i -D ts-node`.
