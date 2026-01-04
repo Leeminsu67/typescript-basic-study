@@ -19,3 +19,8 @@ export interface ICat {
   name: string;
   age: number;
 }
+
+export default {
+  name: "코드팩토리",
+  age: 23,
+};
